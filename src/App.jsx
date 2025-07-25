@@ -9,7 +9,7 @@ import { useGSAP } from "@gsap/react";
 import TestimonialSection from "./sections/TestimonialSection";
 import FooterSection from "./sections/FooterSection";
 import { useEffect } from "react";
-import BrandLogo from "./components/brandLogo";
+import BrandLogo from "./components/BrandLogo";
 import Protine from "../src/sections/Protine";
 
 
