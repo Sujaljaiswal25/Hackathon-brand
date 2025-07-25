@@ -67,8 +67,13 @@ const FlavorSlider = () => {
     <div ref={sliderRef} className="slider-wrapper bg-milk">
       <div className="flavors">
         {flavorlists.map((flavor) => (
-          <div
+          <a 
             key={flavor.name}
+            target="_blank"
+            href={flavor.productLink}
+            rel="noopener noreferrer"
+          >
+          <div
             className={`relative z-30 lg:w-[50vw] w-96 lg:h-[70vh] md:w-[90vw] md:h-[50vh] h-80 flex-none ${flavor.rotation}`}
           >
             <img
@@ -76,12 +81,17 @@ const FlavorSlider = () => {
               alt=""
               className="absolute bottom-0"
             />
+{/*  /brandIMGs/${flavor.color}.png */}
+{/* /images/${flavor.color}-drink.webp */}
 
+            
             <img
-              src={`/images/${flavor.color}-drink.webp`}
+              src={`/brandIMGs/flavors/${flavor.flavor}.webp`}
               alt=""
-              className="drinks"
+              className="drinks cursor-pointer"
             />
+            
+            
 
             <img
               src={`/images/${flavor.color}-elements.webp`}
@@ -91,6 +101,7 @@ const FlavorSlider = () => {
 
             <h1>{flavor.name}</h1>
           </div>
+          </a>
         ))}
       </div>
     </div>
@@ -98,3 +109,7 @@ const FlavorSlider = () => {
 };
 
 export default FlavorSlider;
+
+
+
+

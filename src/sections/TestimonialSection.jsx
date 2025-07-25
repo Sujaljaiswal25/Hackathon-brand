@@ -3,12 +3,18 @@ import { cards } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
+// Responsive fix: import ScrollTrigger for mobile detection and animation control
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
+
 const TestimonialSection = () => {
   const vdRef = useRef([]);
 
   useGSAP(() => {
+    // Remove negative margin that was causing overlap
     gsap.set(".testimonials-section", {
-      marginTop: "-140vh",
+      marginTop: "0",
+      paddingTop: "100px", // Add padding at the top for mobile
     });
 
     const tl = gsap.timeline({
@@ -66,7 +72,7 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section className="testimonials-section ">
+    <section className="testimonials-section bg-milk relative z-40 pt-20 pb-20 md:pt-0 md:pb-0">
       <div className="absolute size-full flex flex-col items-center pt-[5vw]">
         <h1 className="text-black first-title">What's</h1>
         <h1 className="text-light-brown sec-title">Everyone</h1>

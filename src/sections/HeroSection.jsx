@@ -75,22 +75,26 @@ const HeroSection = () => {
                 muted
                 playsInline
                 className="absolute bottom-40 size-full object-cover"
+                preload="auto"
               />
             )}
             <img
               src="/brandIMGs/joinbottles1.png"
+              alt="Join bottles product image"
               className="absolute bottom-0 left-1/2 -translate-x-1/2 object-auto"
             />
+            
             
           </>
         ) : (
           <video
-            src="/brandVIDs/Generated video 1.mp4"
+            src="/brandVIDs/Generated video 1.webm"
             autoPlay
             loop
             muted
             playsInline
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-[100vh] object-cover"
+            preload="auto"
           />
         )}
         <div className="hero-content  opacity-0">
