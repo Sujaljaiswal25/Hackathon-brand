@@ -120,7 +120,8 @@ const About = () => {
               muted={isMuted}
               autoPlay
               playsInline
-              src="/brandVIDs/about.mp4"
+              src="https://ik.imagekit.io/srdho1slq/about.mp4?updatedAt=1753467955239"
+              // src="/brandVIDs/about.mp4"
               aria-label="BEAST LIFE brand video"
               onClick={handlePlayPause}
             />
